@@ -2,10 +2,13 @@
 
 # Sommaire
 
+- [Description](#description)
 - [Installation](#installation)
 - [Compilation](#compilation)
 - [Liste des commandes](#liste-des-commandes)
 - [Contribuer](#contribuer)
+
+# Description
 
 Ce dépôt est présent pour mon plugin sur PaperMC, Everything.
 

@@ -25,7 +25,7 @@ Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, sois 
 | `/sethome`     | `<nom>`                | Pose un point de téléport (home)              |
 | `/home`        | `<nom>`                | Téléporte le joueur à un home                 |
 | `/delhome`     | `<nom>`                | Supprime un home                              |
-| `/world`       | `<create|delete|tp>` `<normal|void>` `[--type=<enable/disable>]` | Gestion des mondes et téléportation     |
+| `/world`       | `<create/delete/tp>` `<normal/void>` `[--type=<enable/disable>]` | Gestion des mondes et téléportation     |
 | `/enderchest`  | `<Rien>`               | Accède à l'Ender Chest du joueur              |
 
 

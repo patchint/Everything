@@ -24,13 +24,18 @@ public class WorldManager {
             uniqueWorldName = worldName;
         }
 
+        if (Bukkit.getWorld(uniqueWorldName) != null) {
+            player.sendMessage(ChatColor.RED + "Un monde avec ce nom existe déjà.");
+            return;
+        }
+
         WorldCreator worldCreator = new WorldCreator(uniqueWorldName);
 
         if ("flat".equalsIgnoreCase(worldType)) {
             worldCreator.type(WorldType.FLAT);
         } else if ("void".equalsIgnoreCase(worldType)) {
             worldCreator.generator(new VoidGenerator());
-        } 
+        }
 
         World newWorld = Bukkit.createWorld(worldCreator);
 
@@ -57,8 +62,8 @@ public class WorldManager {
             ChunkData chunkData = createChunkData(world);
 
             if (x == 0 && z == 0) {
-                for (int y = 0; y < 64; y++) { 
-                    chunkData.setBlock(8, y, 8, Material.STONE); 
+                for (int y = 0; y < 64; y++) {
+                    chunkData.setBlock(8, y, 8, Material.STONE);
                 }
             }
 
@@ -71,7 +76,7 @@ public class WorldManager {
         }
 
         @Override
-        public @NotNull List<BlockPopulator> getDefaultPopulators(World world) {
+        public List<BlockPopulator> getDefaultPopulators(World world) {
             return new ArrayList<>();
         }
     }

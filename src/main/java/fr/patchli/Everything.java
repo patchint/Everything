@@ -58,12 +58,12 @@ public final class Everything extends JavaPlugin implements Listener {
         infosCommand.runTaskTimer(this, 0L, 20L);
 
         // Homes 
-        getServer().getScheduler().runTaskTimer(this, () -> fileHome.saveHomes(), 0L, 1200L);
+        getServer().getScheduler().runTaskTimer(this, fileHome::saveHomes, 0L, 1200L);
         getCommand("sethome").setExecutor(new SetHome(fileHome));
         getCommand("home").setExecutor(new HomeCommand(this, fileHome));
         getCommand("delhome").setExecutor(new DelHomeCommand(this, fileHome));
 
-        getServer().getScheduler().runTaskTimer(this, () -> Backup.saveBackup(), 0L, 72000L);
+        getServer().getScheduler().runTaskTimer(this, Backup::saveBackup, 0L, 72000L);
         getCommand("backup").setExecutor(new BackupCommand(this));
 
         // Dimensions 

@@ -1,0 +1,40 @@
+name: Everything
+version: '${project.version}'
+main: fr.patchli.Everything
+api-version: '1.20'
+authors: [patch]
+description: Basiquement, tout
+website: https://patchli.fr
+enabled: true
+commands:
+  ping:
+    description: "Pong!"
+    usage: /ping
+  infos:
+    description: "Affiche les infos du serveur"
+    usage: /infos
+  backup:
+    description: "Permet de faire une backup de la map"
+    usage: /backup
+  tpa:
+    description: "Envoie une demande de TP"
+    usage: /tpa <player>
+  tpaccept:
+    description: "Accepte une demande de TP"
+    usage: /tpaccept
+  sethome:
+    description: "Poser un home"
+    usage: /sethome <nom>
+  home:
+    description: "Se TP sur home"
+    usage: /home <nom>
+  delhome:
+    description: "Supprimer un home"
+    usage: /delhome <nom>
+  world:
+    description: "Gestion des mondes"
+    usage: /world <create|delete|tp> <normal|void> [--type=<enable/disable>]
+
+  enderchest:
+    description: "Accéder à son enderchest"
+    usage: /enderchest

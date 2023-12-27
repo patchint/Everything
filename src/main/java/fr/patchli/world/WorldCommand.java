@@ -76,6 +76,7 @@ public class WorldCommand implements CommandExecutor {
         boolean includeTime = true;
 
         if (args.length >= 4) {
+<<<<<<< HEAD
             if (args[3].equalsIgnoreCase("--time=disable")) {
                 includeTime = false;
             } else if (args[3].equalsIgnoreCase("--time")) {
@@ -85,6 +86,17 @@ public class WorldCommand implements CommandExecutor {
                     }
                 }
             }
+=======
+             if (args[3].equalsIgnoreCase("--time=disable")) {
+                includeTime = false;
+            } else if (args[3].equalsIgnoreCase("--time")) {
+                 if (args.length == 5) {
+                     if (args[4].equalsIgnoreCase("disable")) {
+                         includeTime = false;
+                     }
+                 }
+             }
+>>>>>>> e4ac01e393674a30285b8945c0d9a060927ed99e
         }
 
         String formattedDate = DateAndTime.getFormattedDate();

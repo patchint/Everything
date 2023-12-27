@@ -40,10 +40,12 @@ Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, soit 
 
 Info (27/12/2023):
 Sur ce tableau sont présentes uniquement les commandes qui sont sur le package en latest "stable".
+
 Je fonctionne de cette manière :
-1 - Je fais plusieurs implémentations
-2 - Quand je commence à en avoir pas mal je fais un nouveau `.jar`
-3 - Je fais une nouvelle release sur GitHub.
+
+- Je fais plusieurs implémentations
+- Quand je commence à en avoir pas mal je fais un nouveau `.jar`
+- Je fais une nouvelle release sur GitHub.
 
 Je préfère faire ça que de surcharger les releases, bien que pour l'instant il risque d'y en avoir beaucoup.
 

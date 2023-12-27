@@ -33,7 +33,7 @@ commands:
     usage: /delhome <nom>
   world:
     description: "Gestion des mondes"
-    usage: /world <create|delete|tp> <normal|void> [--type=<enable/disable>]
+    usage: /world <create|delete|tp> <normal|void> [--type <enable/disable>]
 
   enderchest:
     description: "Accéder à son enderchest"

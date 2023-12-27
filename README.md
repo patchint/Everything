@@ -15,18 +15,18 @@ Rien de plus simple, il suffit juste de glisser le .jar dans le dossier plugin d
 Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, sois vous utilisez Eclipse, sois vous utilisez Idea ou encore VSCode. Personnellement j'utilise Idea.
 
 # Liste des commandes
-| Commande       | Argument               | Explication                                   |
-|----------------|------------------------|-----------------------------------------------|
-| `/ping`        | `<Rien>`               | Pong!                                         |
-| `/infos`       | `<Rien>`               | Affiche les infos du serveur                  |
-| `/backup`      | `<Rien>`               | Permet de sauvegarder les maps du serveur     |
-| `/tpa`         | `<player>`             | Envoie une demande de TP                     |
-| `/tpaccept`    | `<Rien>`               | Accepte une demande de TP                    |
-| `/sethome`     | `<nom>`                | Pose un point de téléport (home)              |
-| `/home`        | `<nom>`                | Téléporte le joueur à un home                 |
-| `/delhome`     | `<nom>`                | Supprime un home                              |
-| `/world`       | `<create/delete/tp>` `<normal/void>` `[--time=<enable/disable>]` | Gestion des mondes et téléportation     |
-| `/enderchest`  | `<Rien>`               | Accède à l'Ender Chest du joueur              |
+| Commande       | Argument                                                                  | Explication                                   |
+|----------------|---------------------------------------------------------------------------|-----------------------------------------------|
+| `/ping`        | `<Rien>`                                                                  | Pong!                                         |
+| `/infos`       | `<Rien>`                                                                  | Affiche les infos du serveur                  |
+| `/backup`      | `<Rien>`                                                                  | Permet de sauvegarder les maps du serveur     |
+| `/tpa`         | `<player>`                                                                | Envoie une demande de TP                     |
+| `/tpaccept`    | `<Rien>`                                                                  | Accepte une demande de TP                    |
+| `/sethome`     | `<nom>`                                                                   | Pose un point de téléport (home)              |
+| `/home`        | `<nom>`                                                                   | Téléporte le joueur à un home                 |
+| `/delhome`     | `<nom>`                                                                   | Supprime un home                              |
+| `/world`       | `<create/delete/tp>` `<normal/void>` `optional:[--time <enable/disable>]` | Gestion des mondes et téléportation     |
+| `/enderchest`  | `<Rien>`                                                                  | Accède à l'Ender Chest du joueur              |
 
 Attention : 
 Sur la commande /world, désactiver le timestamp ne marche pas, c'est une feature que je n'arrive pas à implémenter

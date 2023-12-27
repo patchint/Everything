@@ -1,6 +1,7 @@
 package fr.patchli;
 
 import fr.patchli.home.*;
+import fr.patchli.moderation.*;
 import fr.patchli.player.*;
 import fr.patchli.tpa.*;
 import fr.patchli.utilities.*;
@@ -10,15 +11,13 @@ import fr.patchli.world.*;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Chunk;
-import org.bukkit.World;
-import org.bukkit.block.Sign;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.block.BlockState;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -44,7 +43,6 @@ public final class Everything extends JavaPlugin implements Listener {
         fileHome.saveHomes();
 
         getServer().getPluginManager().registerEvents(this, this);
-        getCommand("ping").setExecutor(new PingPong());
 
         // TPA 
         TPACommand tpaCommand = new TPACommand(teleportRequests);
@@ -74,6 +72,10 @@ public final class Everything extends JavaPlugin implements Listener {
 
         getCommand("enderchest").setExecutor(new EnderchestCommand());
 
+        // Moderation
+
+        getCommand("vanish").setExecutor(new VanishCommand());
+
         // Suppression du censorship de Mojang dans le tchat
         // Code issue du plugin NoCensorShip
         this.saveDefaultConfig();
@@ -85,7 +87,7 @@ public final class Everything extends JavaPlugin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         String playerName = event.getPlayer().getName();
         event.getPlayer().sendMessage(ChatColor.GOLD + "Salut " + playerName + "! Amuse toi bien sur ce serveur MC");
-        event.getPlayer().sendMessage(ChatColor.LIGHT_PURPLE + ("Plugin fait par patchli.fr avec le ♥"));
+        event.getPlayer().sendMessage(ChatColor.LIGHT_PURPLE + ("Plugin fait par patchli.fr avec le ♥" + " | " + "Version : " + this.getDescription().getVersion()));
 
         event.getPlayer().sendMessage(ChatColor.YELLOW + "Si vous voulez avoir les infos actuels du serveur, faites cette commande : /infos");
     }

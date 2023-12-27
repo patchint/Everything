@@ -7,9 +7,6 @@ description: Basiquement, tout
 website: https://patchli.fr
 enabled: true
 commands:
-  ping:
-    description: "Pong!"
-    usage: /ping
   infos:
     description: "Affiche les infos du serveur"
     usage: /infos
@@ -34,6 +31,9 @@ commands:
   world:
     description: "Gestion des mondes"
     usage: /world <create|delete|tp> <normal|void> [--type <enable/disable>]
+  vanish:
+    description: "Permet de se rendre invisible"
+    usage: /vanish
 
   enderchest:
     description: "Accéder à son enderchest"

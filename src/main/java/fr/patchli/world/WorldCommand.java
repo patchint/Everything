@@ -7,7 +7,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.generator.ChunkGenerator;
 
 public class WorldCommand implements CommandExecutor {
 
@@ -78,18 +77,21 @@ public class WorldCommand implements CommandExecutor {
 
         String worldType = args[1].toLowerCase();
         String worldName = args[2];
-        boolean includeTime = true; 
+        boolean includeTime = true;
 
-        for (int i = 3; i < args.length - 1; i++) {
-            if (args[i].equalsIgnoreCase("--time")) {
-                String timeOption = args[i + 1].toLowerCase();
-                includeTime = !timeOption.equals("disable") && !timeOption.equals("false");
-                i++;
-            }
+        if (args.length >= 4) {
+             if (args[3].equalsIgnoreCase("--time=disable")) {
+                includeTime = false;
+            } else if (args[3].equalsIgnoreCase("--time")) {
+                 if (args.length == 5) {
+                     if (args[4].equalsIgnoreCase("disable")) {
+                         includeTime = false;
+                     }
+                 }
+             }
         }
 
         String formattedDate = DateAndTime.getFormattedDate();
-
         WorldManager.createWorld(player, worldType, worldName, includeTime, formattedDate);
     }
 

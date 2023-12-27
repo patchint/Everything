@@ -43,9 +43,9 @@ Sur ce tableau sont présentes uniquement les commandes qui sont sur le package 
 
 Je fonctionne de cette manière :
 
-- Je fais plusieurs implémentations
-- Quand je commence à en avoir pas mal je fais un nouveau `.jar`
-- Je fais une nouvelle release sur GitHub.
+1) Je fais plusieurs implémentations
+2) Quand je commence à en avoir pas mal je fais un nouveau `.jar`
+3) Je fais une nouvelle release sur GitHub.
 
 Je préfère faire ça que de surcharger les releases, bien que pour l'instant il risque d'y en avoir beaucoup.
 

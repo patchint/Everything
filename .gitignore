@@ -119,3 +119,4 @@ fabric.properties
 target/*
 out/*
 server/*
+src/main/java/fr/patchli/night/*

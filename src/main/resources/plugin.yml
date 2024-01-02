@@ -40,3 +40,6 @@ commands:
   invsee:
     description: "Accéder à l'inventaire d'un joueur"
     usage: /invsee
+  night:
+    description: "Confirme le passage de la nuit si un joueur décide d'aller dormir (dans Minecraft bien sûr ici on dors pas)"
+    usage: /night <y/n>

@@ -2,6 +2,8 @@ package fr.patchli;
 
 import fr.patchli.home.*;
 import fr.patchli.moderation.*;
+import fr.patchli.night.NightCommand;
+import fr.patchli.night.SleepListener;
 import fr.patchli.player.*;
 import fr.patchli.tpa.*;
 import fr.patchli.utilities.*;
@@ -72,6 +74,10 @@ public final class Everything extends JavaPlugin implements Listener {
 
         getCommand("ec").setExecutor(new EnderchestCommand());
 
+        // Night
+
+        getCommand("night").setExecutor(new NightCommand());
+        getServer().getPluginManager().registerEvents(new SleepListener(this), this);
 
         // Moderation
 
@@ -89,6 +95,7 @@ public final class Everything extends JavaPlugin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         String playerName = event.getPlayer().getName();
         event.getPlayer().sendMessage(ChatColor.GOLD + "Salut " + playerName + "! Amuse toi bien sur ce serveur MC");
+        event.getPlayer().sendMessage(ChatColor.GOLD + "Nombre de joueur connectés : " + Bukkit.getServer().getOnlinePlayers().size());
         event.getPlayer().sendMessage(ChatColor.LIGHT_PURPLE + ("Plugin fait par patchli.fr avec le ♥" + " | " + "Version : " + this.getDescription().getVersion()));
 
         event.getPlayer().sendMessage(ChatColor.YELLOW + "Si vous voulez avoir les infos actuels du serveur, faites cette commande : /infos");

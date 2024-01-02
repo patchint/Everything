@@ -76,8 +76,8 @@ public final class Everything extends JavaPlugin implements Listener {
 
         // Night
 
-        getCommand("night").setExecutor(new NightCommand());
-        getServer().getPluginManager().registerEvents(new SleepListener(this), this);
+        // getCommand("night").setExecutor(new NightCommand());
+        // getServer().getPluginManager().registerEvents(new SleepListener(this), this);
 
         // Moderation
 

@@ -6,6 +6,7 @@
 - [Installation](#installation)
 - [Compilation](#compilation)
 - [Liste des commandes](#liste-des-commandes)
+- [Rythme de sortie des releases](#rythme-de-sortie-des-releases)
 - [Contribuer](#contribuer)
 
 # Description
@@ -39,17 +40,13 @@ Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, soit 
 | `/invsee`   | `<player>`                                                                 | Affiche le contenue de l'inventaire d'un joueur           |
 
 
-Info (27/12/2023):
+# Rythme de sortie des releases
 
-Sur ce tableau sont présentes uniquement les commandes qui sont sur le package en latest "stable".
+Les releases sont des packages dits stables. En revanche le dépôt git peut comporter des bugs.
 
-Je fonctionne de cette manière :
+Les releases sortent quand tout fonctionne ! (Logique)
 
-1) Je fais plusieurs implémentations
-2) Quand je commence à en avoir pas mal je fais un nouveau `.jar`
-3) Je fais une nouvelle release sur GitHub.
-
-Je préfère faire ça que de surcharger les releases, bien que pour l'instant il risque d'y en avoir beaucoup.
+Je pourrais automatiser ça avec GitHub Actions mais cela serait un peu bête si mon code n'est pas fonctionnel. (Bien qu'il permet de le vérifier, mais je préfère le faire manuellement.)
 
 # Contribuer
 

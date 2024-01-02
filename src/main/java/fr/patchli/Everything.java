@@ -70,11 +70,13 @@ public final class Everything extends JavaPlugin implements Listener {
 
         // Player 
 
-        getCommand("enderchest").setExecutor(new EnderchestCommand());
+        getCommand("ec").setExecutor(new EnderchestCommand());
+
 
         // Moderation
 
         getCommand("vanish").setExecutor(new VanishCommand());
+        getCommand("invsee").setExecutor(new InvseeCommand());
 
         // Suppression du censorship de Mojang dans le tchat
         // Code issue du plugin NoCensorShip

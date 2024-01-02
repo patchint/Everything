@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MarkdownSettings">
+    <option name="customStylesheetText" value="body {&#10;    color: white;&#10;    background-color: #151b27;&#10;    font-size: 20px;&#10;}&#10;&#10;a {&#10;    color: #ffd9a0;&#10;    text-decoration: none;&#10;}&#10;&#10;a:hover {&#10;    text-decoration: underline;&#10;}" />
+    <option name="useCustomStylesheetText" value="true" />
+  </component>
+</project>

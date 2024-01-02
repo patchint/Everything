@@ -25,20 +25,22 @@ Rien de plus simple, il suffit juste de glisser le `.jar` dans le dossier plugin
 Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, soit vous utilisez Eclipse, soit vous utilisez Idea ou encore VSCode. Personnellement, j'utilise Idea.
 
 # Liste des commandes
-| Commande       | Argument                                                                  | Explication                                         |
-|----------------|---------------------------------------------------------------------------|-----------------------------------------------------|
-| `/ping`        | `<Rien>`                                                                  | Pong!                                               |
-| `/infos`       | `<Rien>`                                                                  | Affiche les infos du serveur                        |
-| `/backup`      | `<Rien>`                                                                  | Permet de sauvegarder les maps du serveur           |
-| `/tpa`         | `<player>`                                                                | Envoie une demande de TP                            |
-| `/tpaccept`    | `<Rien>`                                                                  | Accepte une demande de TP                           |
-| `/sethome`     | `<nom>`                                                                   | Pose un point de téléport (home)                    |
-| `/home`        | `<nom>`                                                                   | Téléporte le joueur à un home                       |
-| `/delhome`     | `<nom>`                                                                   | Supprime un home                                    |
-| `/world`       | `<create/delete/tp>` `<normal/void>` `optional:[--time <enable/disable>]` | Gestion des mondes et téléportation dans les mondes |
-| `/enderchest`  | `<Rien>`                                                                  | Accède à l'Ender Chest du joueur                    |
+| Commande    | Argument                                                                  | Explication                                          |
+|-------------|---------------------------------------------------------------------------|------------------------------------------------------|
+| `/infos`    | `<Rien>`                                                                  | Affiche les infos du serveur                         |
+| `/backup`   | `<Rien>`                                                                  | Permet de sauvegarder les maps du serveur            |
+| `/tpa`      | `<player>`                                                                | Envoie une demande de TP                             |
+| `/tpaccept` | `<Rien>`                                                                  | Accepte une demande de TP                            |
+| `/sethome`  | `<nom>`                                                                   | Pose un point de téléport (home)                     |
+| `/home`     | `<nom>`                                                                   | Téléporte le joueur à un home                        |
+| `/delhome`  | `<nom>`                                                                   | Supprime un home                                     |
+| `/world`    | `<create/delete/tp>` `<normal/void>` `optional:[--time <enable/disable>]` | Gestion des mondes et téléportation dans les mondes  |
+| `/ec`       | `<Rien>`                                                                  | Accède à l'Ender Chest du joueur                     |
+| '/invsee'   | '<player>'                                                                | Affiche le contenue de l'inventaire d'un joueur      |
+
 
 Info (27/12/2023):
+
 Sur ce tableau sont présentes uniquement les commandes qui sont sur le package en latest "stable".
 
 Je fonctionne de cette manière :
@@ -52,4 +54,7 @@ Je préfère faire ça que de surcharger les releases, bien que pour l'instant i
 # Contribuer
 
 Si vous souhaitez contribuer au code de mon plugin, vous pouvez !
+
 De même si vous souhaitez que je rajoute une feature faites le savoir :p
+
+

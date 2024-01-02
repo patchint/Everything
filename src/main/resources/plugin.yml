@@ -34,7 +34,9 @@ commands:
   vanish:
     description: "Permet de se rendre invisible"
     usage: /vanish
-
-  enderchest:
+  ec:
     description: "Accéder à son enderchest"
-    usage: /enderchest
+    usage: /ec
+  invsee:
+    description: "Accéder à l'inventaire d'un joueur"
+    usage: /invsee

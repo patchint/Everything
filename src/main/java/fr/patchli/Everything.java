@@ -8,18 +8,16 @@ import fr.patchli.player.*;
 import fr.patchli.tpa.*;
 import fr.patchli.utilities.*;
 import fr.patchli.backup.*;
-import fr.patchli.perms.*;
+// import fr.patchli.perms.*;
 import fr.patchli.world.*;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -28,6 +26,8 @@ public final class Everything extends JavaPlugin implements Listener {
 
     private static final String CONFIG_FOLDER = "Everything";
     private FileHome fileHome;
+
+    private FileBackup fileBackup;
 
     @Override
     public void onEnable() {
@@ -43,6 +43,12 @@ public final class Everything extends JavaPlugin implements Listener {
         fileHome = new FileHome(getLogger(), getDataFolder());
         fileHome.loadHomes(getDataFolder());
         fileHome.saveHomes();
+
+        // Chargement du fichier de config pour les backups
+
+        fileBackup = new FileBackup(getLogger(), getDataFolder());
+        fileBackup.loadBackup();
+        fileBackup.saveBackup();
 
         getServer().getPluginManager().registerEvents(this, this);
 
@@ -63,7 +69,7 @@ public final class Everything extends JavaPlugin implements Listener {
         getCommand("home").setExecutor(new HomeCommand(this, fileHome));
         getCommand("delhome").setExecutor(new DelHomeCommand(this, fileHome));
 
-        getServer().getScheduler().runTaskTimer(this, Backup::saveBackup, 0L, 72000L);
+        getServer().getScheduler().runTaskTimer(this, Backup::saveBackup, 0L, 432000L);
         getCommand("backup").setExecutor(new BackupCommand(this));
 
         // Dimensions 

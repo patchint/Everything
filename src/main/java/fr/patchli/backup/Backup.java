@@ -3,8 +3,10 @@ package fr.patchli.backup;
 import fr.patchli.utilities.DateAndTime;
 import org.bukkit.ChatColor;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.List;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -20,17 +22,18 @@ public class Backup {
 
             broadcastMessage(ChatColor.RED + "Backup démarrée. Attention des lags peuvent arriver");
 
-            Path worldPath = Paths.get("world");
-            Path netherPath = Paths.get("world_nether");
-            Path endPath = Paths.get("world_the_end");
-
             Path backupPath = Paths.get("plugins/Everything/backup");
             Files.createDirectories(backupPath);
 
+            List<String> backupWorlds = FileBackup.getBackupWorlds();
+
             try (ZipOutputStream zipOutputStream = new ZipOutputStream(Files.newOutputStream(backupPath.resolve("backup_" + DateAndTime.getFormattedDate() + ".zip")))) {
-                compressFolder(worldPath, "world", zipOutputStream);
-                compressFolder(netherPath, "world_nether", zipOutputStream);
-                compressFolder(endPath, "world_the_end", zipOutputStream);
+                for (String world : backupWorlds) {
+                    File worldDir = new File(world);
+                    Path worldPath = worldDir.toPath();
+
+                    compressFolder(worldPath, worldDir.getName(), zipOutputStream);
+                }
             }
 
             try {

@@ -23,22 +23,22 @@ Rien de plus simple, il suffit juste de glisser le `.jar` dans le dossier plugin
 
 # Compilation
 
-Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, soit vous utilisez Eclipse, soit vous utilisez Idea ou encore VSCode. Personnellement, j'utilise Idea.
+Pour pouvoir compiler le plugin, il vous faut avoir un environnement Java, soit vous utilisez Eclipse, soit vous utilisez IntelliJ IDEA ou encore VSCode. Personnellement, j'utilise IDEA.
 
 # Liste des commandes
-| Commande      | Argument                                                                  | Explication                                                                                                 |
-|---------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| `/infos`      | `<Rien>`                                                                  | Affiche les infos du serveur                                                                                |
-| `/backup`     | `<Rien>`                                                                  | Permet de sauvegarder les maps du serveur                                                                   |
-| `/tpa`        | `<player>`                                                                | Envoie une demande de TP                                                                                    |
-| `/tpaccept`   | `<Rien>`                                                                  | Accepte une demande de TP                                                                                   |
-| `/sethome`    | `<nom>`                                                                   | Pose un point de téléport (home)                                                                            |
-| `/home`       | `<nom>`                                                                   | Téléporte le joueur à un home                                                                               |
-| `/delhome`    | `<nom>`                                                                   | Supprime un home                                                                                            |
-| `/world`      | `<create/delete/tp>` `<normal/void>` `optional:[--time <enable/disable>]` | Gestion des mondes et téléportation dans les mondes                                                         |
-| `/ec`         | `<Rien>`                                                                  | Accède à l'Ender Chest du joueur                                                                            |
-| `/invsee`     | `<player>`                                                                | Affiche le contenue de l'inventaire d'un joueur                                                             |
-| `/night`      | `y/n`                                                                     | Confirme le passage de la nuit si un joueur décide d'aller dormir (dans Minecraft bien sûr ici on dors pas) |    
+| Commande              | Argument                                                                  | Explication                                                                                                 |
+|-----------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| `/infos`              |                                                                           | Affiche les infos du serveur                                                                                |
+| `/backup`             |                                                                           | Permet de sauvegarder les maps du serveur                                                                   |
+| `/tpa`                | `<player>`                                                                | Envoie une demande de TP                                                                                    |
+| `/tpaccept`           |                                                                           | Accepte une demande de TP                                                                                   |
+| `/sethome`            | `<nom>`                                                                   | Pose un point de téléport (home)                                                                            |
+| `/home`               | `<nom>`                                                                   | Téléporte le joueur à un home                                                                               |
+| `/delhome`            | `<nom>`                                                                   | Supprime un home                                                                                            |
+| `/world`              | `<create/delete/tp>` `<normal/void>` `optional:[--time <enable/disable>]` | Gestion des mondes et téléportation dans les mondes                                                         |
+| `/ec`                 |                                                                           | Accède à l'Ender Chest du joueur                                                                            |
+| `/invsee`             | `<player>`                                                                | Affiche le contenue de l'inventaire d'un joueur                                                             |
+| `/night` (désactivé)  | `y/n`                                                                     | Confirme le passage de la nuit si un joueur décide d'aller dormir (dans Minecraft bien sûr ici on dors pas) |    
 
 
 # Rythme de sortie des releases
